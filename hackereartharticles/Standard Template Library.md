@@ -23,6 +23,9 @@ Article Link: https://www.hackerearth.com/practice/notes/standard-template-libra
 | `replace()` | replaces particular portion of the string | O(N) where N is the length of the new string | - |
 | `compare()` | compares string with another string(returns 0 if both the strings are identical) | O(N+M) where N is length of one string and M is length of other string | - |
 | `c_str()` | converts string into C-style and returns pointer to the first character | O(1) | - |
+---
+---
+<br>
 
 ### Vector `vector<typename T>`
 ------------------------------
@@ -39,6 +42,9 @@ Article Link: https://www.hackerearth.com/practice/notes/standard-template-libra
 | `end()` | returns iterator pointing to the last element | O(1) | - |
 | `empty()` | returns boolean values(true if vector is empty else false) | O(1) | - |
 | `erase()` | erases subvector of the vector | O(N+M) where N is the number of elements erased and M is the number of elements moved | - |
+---
+---
+<br>
 
 ### List `list<typename T>`
 ---------------------------
@@ -59,6 +65,9 @@ Article Link: https://www.hackerearth.com/practice/notes/standard-template-libra
 | `erase()` | erases sublist of the list | O(N) where N is the number of elements erased | - |
 | `remove()` | removes all elements from the list which are equivalent to particular element | O(N) | - |
 | `reverse()` | reverses the order of elements in the list | O(N) where N is the length of the list | - |
+---
+---
+<br>
 
 ### Set `set<typename T>`
 -------------------------
@@ -75,6 +84,9 @@ Article Link: https://www.hackerearth.com/practice/notes/standard-template-libra
 | `empty()` | returns boolean values(true if set is empty else false) | O(1) | - |
 | `erase()` | deletes element or range of elements from the set | O(N) where N is the number of elements in the delete range | - |
 | `count()` | returns 1 if particular element is present else 0 | O(log(N)) where N is the size of the set | - |
+---
+---
+<br>
 
 ### Map `map<typename T, typename U>`
 -------------------------------------
@@ -93,11 +105,50 @@ Article Link: https://www.hackerearth.com/practice/notes/standard-template-libra
 | `erase()` | deletes element or range of elements from the map | - | - |
 | `count()` | returns number of matches of particular element with values of the map(if there is no key corresponding to the particular element as value then returns 0) | O(log(N)) | - |
 | `swap()` | swap contents of one map with another | - | - |
+---
+---
+<br>
 
 ### Stack `stack<typename T>`
 ----------------------------
+> LIFO. Abstracts out underlying deque container.
+
+| Operation | Function | Time Complexity | Remarks |
+|-----------|----------|-----------------|---------|
+| `push()` | inserts element at top of stack | O(1) | - |
+| `pop()` | removes element from top of stack | O(1) | - |
+| `top()` | returns element at top of stack | O(1) | - |
+| `empty()` | returns boolean values(true if stack is empty else false) | O(1) | - |
+| `size()` | returns length of stack | O(1) | - |
+---
+---
+<br>
 
 ### Queue `queue<typename T>`
 ----------------------------
+> FIFO. Abstracts out underlying deque container.
+
+| Operation | Function | Time Complexity | Remarks |
+|-----------|----------|-----------------|---------|
+| `push()` | inserts element at front of queue | O(1) | - |
+| `pop()` | removes element from front of queue | O(1) | - |
+| `front()` | returns element at front of queue | O(1) | - |
+| `empty()` | returns boolean values(true if queue is empty else false) | O(1) | - |
+| `size()` | returns length of queue | O(1) | - |
+---
+---
+<br>
 
 ### Priority Queue `priority_queue<typename T>`
+-----------------------------------------------
+> Largest element is extracted in constant time. Insertion and deletion time is logarithmic.
+
+| Operation | Function | Time Complexity | Remarks |
+|-----------|----------|-----------------|---------|
+| `push()` | inserts element at front of priority queue | O(log(N)) where N is the size of priority queue | - |
+| `pop()` | removes largest element from priority queue queue | O(log(N)) where N is the size of priority queue | - |
+| `top()` | returns largest element from the priority queue | O(1) | - |
+| `empty()` | returns boolean values(true if priority queue is empty else false) | O(1) | - |
+| `size()` | returns length of priority queue | O(1) | - |
+---
+---
