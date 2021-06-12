@@ -66,6 +66,35 @@ vector <int> max_of_subarrays(int *arr, int n, int k)
 ## Solution Approach 02
 -----------------------
 ```
+vector <int> max_of_subarrays(int *arr, int n, int k)
+{
+    // your code here
+    deque<int> dq;
+    vector<int> ans;
+    for(int i=0; i<k; ++i){
+        while(!dq.empty() && arr[i]>arr[dq.back()]){
+            dq.pop_back();
+        }
+        dq.push_back(i);
+    }
+    ans.push_back(arr[dq.front()]);
+    for(int i=1; i<n-k+1; ++i){
+        //update dq
+        int old = i-1;
+        int nxt = i+k-1;
+        //adding new window element
+        while(!dq.empty() && arr[nxt]>arr[dq.back()]){
+            dq.pop_back();
+        }
+        //removing old window element
+        while(!dq.empty() && dq.front()<=old){
+            dq.pop_front();
+        }
+        dq.push_back(nxt);
+        ans.push_back(arr[dq.front()]);
+    }
+    return ans;
+}
 ```
 
 ## Notes
