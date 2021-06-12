@@ -16,7 +16,6 @@ Problem link: https://practice.geeksforgeeks.org/problems/game-with-string4100/1
 ```
 int minValue(string s, int k){
     // code here
-    
     vector<int> arr(26, 0);
     for(auto &ch:s){
         arr[ch-97]++;
