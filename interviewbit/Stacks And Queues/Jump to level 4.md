@@ -42,3 +42,38 @@ int Solution::kthsmallest(const vector<int> &A, int B) {
 ## Notes
 --------
 - Time Complexity is O(klog(n)). Since each push or pop operation of priority queue takes O(log(n)) time. Space complexity is O(n). Since all elements are stored.
+
+## Kth Smallest Element in the Array
+------------------------------------
+Problem Name: NUMRANGE <br>
+Problem Link: https://www.interviewbit.com/problems/numrange/
+
+## Question
+-----------
+
+## Idea
+-------
+
+## Solution Approach 01
+-----------------------
+```
+int Solution::numRange(vector<int> &A, int B, int C) {
+    int ans= 0;
+    int n = A.size();
+    for(int i=0; i<n; ++i){
+        int limit = i;
+        int sum = 0;
+        while(limit<n && sum+A[limit]<=C){
+            if(sum+A[limit]>=B) {
+                ans++;
+            }
+            sum+=A[limit];
+            limit++;
+        }
+    }
+    return ans;
+}
+```
+
+## Notes
+--------
