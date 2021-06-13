@@ -1,4 +1,4 @@
-## June 07
+## June 08
 ---------
 Problem Name: Longest Prefix Suffix  <br>
 Problem Link: https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1
