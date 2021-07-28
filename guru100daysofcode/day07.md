@@ -17,6 +17,25 @@ The question is to print Inorder traversal of given tree(without recursion i.e. 
 ## Solution Approach 01
 -----------------------
 ```
+vector<int> inOrder(Node* root)
+{
+    //code here
+    vector<int> ans;
+    if(!root) return ans;
+    stack<Node*> stk;
+    Node* cur = root;
+    while(1){
+        while(cur){
+            stk.push(cur);
+            cur = cur->left;
+        }
+        if(stk.empty()) break;
+        Node* temp = stk.top(); stk.pop();
+        ans.push_back(temp->data);
+        cur = temp->right;
+    }
+    return ans;
+}
 ```
 
 ## Notes
